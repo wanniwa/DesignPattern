@@ -8,6 +8,9 @@ package com.wanniwa.dp.singleton;
 public class Config07 {
 
     private Config07() {
+        if (null != Config07Holder.INSTANCE) {
+            throw new IllegalStateException();
+        }
     }
 
     private static class Config07Holder {

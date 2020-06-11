@@ -8,6 +8,7 @@ public class Config06 {
     private static volatile Config06 INSTANCE; //JIT
 
     private Config06() {
+
     }
 
     public static Config06 getInstance() {
