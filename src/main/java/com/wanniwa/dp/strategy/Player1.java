@@ -1,6 +1,10 @@
 package com.wanniwa.dp.strategy;
 
-public class Player {
+import com.wanniwa.dp.strategy.fly.FlyHigh;
+import com.wanniwa.dp.strategy.fly.FlyLow;
+import com.wanniwa.dp.strategy.fly.FlyMedium;
+
+public class Player1 {
 
     private int vipLevel;
 
@@ -12,12 +16,26 @@ public class Player {
         this.vipLevel = vipLevel;
     }
 
-    public Player(int vipLevel) {
+    public Player1(int vipLevel) {
         this.vipLevel = vipLevel;
     }
 
     public static void main(String[] args) {
-        Player player = new Player(1);
+        Player1 player = new Player1(1);
+        int vipLevel = player.getVipLevel();
+        Character1 character = new Character1();
+        if (vipLevel <= 1) {
+            character.setFlyBehavior(new FlyLow());
+        } else if (vipLevel <= 2) {
+            character.setFlyBehavior(new FlyMedium());
+        } else {
+            character.setFlyBehavior(new FlyHigh());
+        }
+        character.performFly();
+    }
+
+    public static void main2(String[] args) {
+        Player1 player = new Player1(1);
         int vipLevel = player.getVipLevel();
         Character1 character = new Character1();
         if (vipLevel <= 1) {

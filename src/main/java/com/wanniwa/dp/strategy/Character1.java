@@ -5,13 +5,13 @@ import com.wanniwa.dp.strategy.fly.FlyBehavior;
 /**
  * 游戏角色-Context
  */
-public class Charactor {
+public class Character1 {
     /**
      * 飞行行为
      */
     private FlyBehavior flyBehavior;
 
-    public Charactor() {
+    public Character1() {
     }
 
     public FlyBehavior getFlyBehavior() {
